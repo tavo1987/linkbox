@@ -1,0 +1,37 @@
+// Variables
+
+$gray-darker: lighten(#000, 13.5%);
+$gray-dark: lighten(#000, 20%);
+$gray: lighten(#000, 33.5%);
+$gray-light: lighten(#000, 60%);
+$gray-lighter: lighten(#000, 93.5%);
+$gray-lightest: lighten(#000, 97.25%);
+$brand-primary: #428bca;
+$brand-success: #5cb85c;
+$brand-info: #5bc0de;
+$brand-warning: #f0ad4e;
+$brand-danger: #d9534f;
+
+
+
+//COLOR DE ICONOS DE MENU Y SIDE BAR
+$menu-icon-color:#fff;
+
+
+
+//LOGO O MARCA
+
+$color-nav-brand:#fff;
+
+//VARIABLES MENU
+
+$bg-menu:#1B1E24;
+$link-color-menu:#8B91A0;
+$link-color-hover-menu:#fff;
+$link-bg-color:lighten($bg-menu,15%);
+$link-bg-color-hover:seagreen;
+$link-bg-second-level:lighten($bg-menu,4%);
+
+$border-color-menu:1px solid rgba(#fff,.05);
+$border-color-top-menu:rgba(#fff,.2);
+

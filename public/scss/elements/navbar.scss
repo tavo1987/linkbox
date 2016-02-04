@@ -1,0 +1,87 @@
+
+.nav{
+  
+  a{
+    color: $link-color-menu;
+    transition: all .3s ease-in-out;
+
+    &:hover{
+      color: $link-color-hover-menu;
+    }
+
+  }//FIN LINK
+  
+}//FIN NAV
+
+
+.sidebar{
+  ul li{
+    border-bottom:$border-color-menu;
+  }
+}//FIN SIDEBAR
+
+
+.nav > li > a:focus, 
+.nav > li > a:hover{
+  background: $link-bg-color-hover;
+}
+
+
+.nav .nav-second-level{
+  background:$link-bg-second-level;
+}
+
+.navbar-default{
+  background: $bg-menu;
+  border-color:$border-color-top-menu;
+
+  .fa{
+    color: $menu-icon-color;
+  }
+
+  a{
+    color: $link-color-hover-menu;
+  }
+  
+  .active a{
+    color: $link-color-hover-menu;
+  }
+
+  .nav .open > a{
+    background: $link-bg-color-hover;
+
+  }
+
+  //LOGO
+  .navbar-brand{
+    color: $color-nav-brand;
+  }
+
+}//NAV-DEFATULT
+
+.dropdown-menu .fa{
+  color: $link-bg-color;
+}
+
+.sidebar ul li a.active{
+  background:lighten($bg-menu,4%);
+}
+
+//BARRA DE BUSQUEDA
+
+.custom-search-form{
+  border-radius:5px;
+
+  .btn-default{
+    border-color:transparent;
+    background: seagreen;
+    transition: all .3s ease-in-out;
+    
+    &:hover{
+      background:darken(seagreen,10%);
+    }
+    
+  }
+}
+
+

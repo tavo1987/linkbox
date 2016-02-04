@@ -1,0 +1,107 @@
+.login-panel{
+  background: #EEF2F5;
+  max-width: 600px;
+  margin: 10% auto 0 auto;
+  padding:3.5rem 3rem 3rem 3rem;
+
+  .form-title{
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+  }
+  
+  .login-form{
+
+    input::-webkit-input-placeholder {
+      color: #7B8797;
+      font-size:1.65rem;
+      line-height:1.1;
+    }
+
+    .icons-input{
+      margin-bottom:1.5rem;
+      position: relative;
+
+      .fa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 100%;
+        position: absolute;
+
+      }
+    }
+
+    .inputs{
+      width:100%;
+      line-height:1.1;
+      height:auto;
+      color: #7B8797;
+      background: #DBE3EE;
+      border: none;
+      border-radius:3px;
+      font-size:1.5rem;
+      padding:1.25rem 1rem 1rem 4rem;
+
+      &:focus{
+        outline: none;
+      }
+
+    }
+
+    .button{
+      display: inline-block;
+      background: seagreen;
+      color: #fff;
+      border: none;
+      margin-top:2rem;
+      text-transform: uppercase;
+      padding:1.25rem 2rem;
+      border-radius:3px;
+
+    }
+
+    .button-forget{
+      display: block;
+      margin-top:.75rem;
+      color: #000;
+    }
+
+
+    .button-facebook{
+      display: block;
+      background: #4E71AB;
+      color: #fff;
+      margin-top:3rem;
+      font-size:2rem;
+      text-align: center;
+      padding:1.25rem;
+      border-radius:3px;
+      position: relative;
+      transition: all .3s ease-in-out;
+
+      &:hover{
+        text-decoration: none;
+        background: darken(#385495,2%);
+      }
+
+
+      .fa-facebook{
+        position: absolute;
+        height: 100%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:10%;
+        border-radius: 3px 0 0 3px;
+        left: 0;
+        background:#385495;
+      }
+    }
+    
+  }//FIN LOGIN FORM
+
+  
+}//FIN LOGIN PANEL
