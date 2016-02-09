@@ -1,52 +1,32 @@
 <?php
 
-use Illuminate\Database\Seeder;
-use App\Entities\Link;
-use App\Entities\Category;
-use App\Entities\UserProfile;
+use Styde\Seeder\Seeder;
 use App\Entities\User;
+use Faker\Generator;
+
 
 
 class UserTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
+
+    protected $total = 300;
+
+    public function getModel()
     {
-
-        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
-        User::truncate();
-        UserProfile::truncate();
-        Link::truncate();
-        Category::truncate();
-        DB::table('votes')->truncate();
-        DB::table('category_link')->truncate();
-
-
-        //admin
-        $user = User::create([
-            'name' => 'Edwin Ramírez',
-            'email'=> 'tavo198718@gmail.com',
-            'password'=> 'secret',
-            'active'=> 1,
-            'role' => 'admin',
-            'remember_token' => str_random(10),
-        ]);
-
-
-
-        factory(User::getClass(),100)->create();
-        factory(UserProfile::getClass(),100)->create();
-        factory(Category::getClass(),100)->create();
-
-        factory(Link::getClass(),200)->create()->each(function($link){
-            $link->voters()->attach(array_rand(range(1,100),5));
-            $link->categories()->attach(array_rand(range(1,100),5));
-        });
-
-
+        return new User();
     }
+
+    public function getDummyData(Generator $faker, array $customValues = array())
+    {
+        return [
+            'name' => $faker->firstName,
+            'email' => $faker->email,
+            'password' => 'secret',
+            'role' => $faker->randomElement(['admin','member','member']),
+            'provider_id' => null,
+            'active' => $faker->randomElement([1,0,1,1]),
+            'confirmation_token' => str_random(20)
+        ];
+    }
+
 }
