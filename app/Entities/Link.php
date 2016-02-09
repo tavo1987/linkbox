@@ -2,7 +2,6 @@
 
 namespace App\Entities;
 
-use Illuminate\Database\Eloquent\Model;
 
 class Link extends Entity
 {
@@ -29,6 +28,6 @@ class Link extends Entity
 
     public function voters()
     {
-        return $this->belongsToMany(User::getClass(),'votes');
+        return $this->belongsToMany(User::getClass(),'votes')->withTimestamps();
     }
 }

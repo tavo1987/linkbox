@@ -65,7 +65,7 @@ class User extends Entity implements AuthenticatableContract,
 
     public function votes()
     {
-        return $this->belongsToMany(Link::getClass(),'votes');
+        return $this->belongsToMany(Link::getClass(),'votes')->withTimestamps();
     }
 
     /**
