@@ -150,6 +150,7 @@ return [
          */
         Collective\Html\HtmlServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Styde\Seeder\SeederServiceProvider::class,
 
     ],
 
