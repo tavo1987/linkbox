@@ -15,10 +15,31 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    public function test_create_user()
-    {
-        Seed('User');
 
-        $this->assertTrue(true);
+    public function test_user_login()
+    {
+
+        //HAVING
+        $user = seed('User',[
+            'email'              => 'admin@gmail.com',
+            'password'           => 'secret',
+            'role'               => 'admin',
+            'active'             => 1,
+            'confirmation_token' => null
+
+            ]);
+
+        //WHEN
+        $this->visit('/')
+            ->see('Inicia Sesión por favor')
+            ->type($user->email, 'email')
+            ->type('secret', 'password')
+            ->press('Entrar');
+
+        //THEN
+            $this->see('Usuarios')
+                ->seePageis('/admin/users');
+
+
     }
 }
