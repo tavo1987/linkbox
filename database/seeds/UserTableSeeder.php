@@ -25,8 +25,8 @@ class UserTableSeeder extends Seeder
             'role' => $faker->randomElement(['admin','member','member']),
             'provider_id' => null,
             'active' => $faker->randomElement([1,0,1,1]),
-            'confirmation_token' => str_random(20)
+            'confirmation_token' => null
         ];
     }
-
+    
 }
